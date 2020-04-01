@@ -26,10 +26,10 @@
         },
 
         {
-            "name": "(gdb) gtest bug",
+            "name": "(gdb) gtest creator_test",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/build/${fileBasenameNoExtension}",
+            "program": "${workspaceFolder}/gtest/build/creator_test",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",

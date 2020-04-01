@@ -25,7 +25,7 @@
             "command": "bash",
             "args": [
                 "-c",
-                "cd ${fileDirname} && mkdir -p build && cd build && cmake .. -DCMAKE_BUILD_TYPE=Debug && make -j4",
+                "cd ${workspaceFolder}/gtest && mkdir -p build && cd build && cmake .. -DCMAKE_BUILD_TYPE=Debug && make -j4",
             ],
             "options": {
                 "cwd": "/bin"

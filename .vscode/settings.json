@@ -23,7 +23,7 @@
         ]
     },
     "gtest-adapter.debugConfig": [
-        "(gdb) gtest bug"
+        "(gdb) gtest creator_test"
     ],
     "gtest-adapter.supportLocation": true,
     "files.associations": {
