@@ -1,0 +1,39 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558 
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "cmake main debug",
+            "command": "bash",
+            "args": [
+                "-c",
+                "cd ${workspaceFolder} && mkdir -p build && cd build && cmake .. -DCMAKE_BUILD_TYPE=Debug && make -j4",
+            ],
+            "options": {
+                "cwd": "/bin"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "cmake test debug",
+            "command": "bash",
+            "args": [
+                "-c",
+                "cd ${fileDirname} && mkdir -p build && cd build && cmake .. -DCMAKE_BUILD_TYPE=Debug && make -j4",
+            ],
+            "options": {
+                "cwd": "/bin"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
