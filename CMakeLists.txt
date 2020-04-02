@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.0.0)
 project(creator VERSION 0.1.0)
 
 SET(CMAKE_BUILD_TYPE "Debug")
-SET(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -std=c++1z -Wall -g2 -ggdb")
+SET(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -std=c++1z -Werror -g2 -ggdb")
 SET(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall")
 
 option(ENABLE_TEST "gtest build" OFF)

@@ -8,7 +8,6 @@ TEST(creator_test, number_creator)
     ulong n;
 
     auto create = creator<ulong>::make_number_creator(0, 1000);
-
     for (int i = 0; i < 1000; i++)
     {
         n = create->create();
@@ -39,19 +38,18 @@ TEST(creator_test, real_creator)
     for (int i = 0; i < 1000; i++)
     {
         n = create2->create();
-        ASSERT_LT(n, 4.0) << n;
-        ASSERT_GE(n, 2.0) << n;
     }
-
 }
 
 TEST(creator_test, name_creator) {
-    wstring n;
+    words ws;
     auto create = creator<wstring>::make_name_creator();
-    n = create->create();
     for (int i = 0; i < 1000; i++)
     {
-        n = create->create();
-        ASSERT_EQ(n, L"1") << n;
+        wstring n = create->create();
+        ASSERT_LE(n.size(), 2) << n;
+        ws.push_back(n);
     }
+ 
+    ASSERT_TRUE(ws.size() == 1000) << ws.size();
 }

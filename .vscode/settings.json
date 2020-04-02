@@ -79,6 +79,9 @@
         "cfenv": "cpp",
         "cinttypes": "cpp",
         "typeinfo": "cpp",
-        "bit": "cpp"
-    }
+        "bit": "cpp",
+        "regex": "cpp",
+        "bitset": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
 }
